@@ -3,9 +3,7 @@
 one:
   title: MyString
   body: MyText
-  created_at: MyString
 
 two:
   title: MyString
   body: MyText
-  created_at: MyString
