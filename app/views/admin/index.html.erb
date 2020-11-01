@@ -1,1 +1,13 @@
 <h1>Welcome</h1>
+
+<%= form_tag({:action => "create"}, :multipart => true) do %>
+    <div class="field">
+        <%= label_tag :file, 'resume' %>
+        <%= file_field_tag :file %>
+    </div>
+
+    <div class="submit">
+        <%= submit_tag 'upload'%>
+    </div>
+<% end %>
+
