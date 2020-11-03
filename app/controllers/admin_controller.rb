@@ -4,7 +4,7 @@ class AdminController < ApplicationController
 
   def create
     upload = params[:file]
-    File.open(Rails.root.join('public', 'uploads', 'resume'),
+    File.open(Rails.root.join('public', 'uploads', 'resume.pdf'),
       'wb') do |file|
         file.write(upload.read)
       end

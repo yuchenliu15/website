@@ -3,7 +3,7 @@
 <%= form_tag({:action => "create"}, :multipart => true) do %>
     <div class="field">
         <%= label_tag :file, 'resume' %>
-        <%= file_field_tag :file %>
+        <%= file_field_tag :file, accept: 'application/pdf' %>
     </div>
 
     <div class="submit">
