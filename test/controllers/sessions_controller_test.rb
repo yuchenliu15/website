@@ -9,6 +9,9 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to admin_url
   end
 
-
+  test "login helper" do
+    login_as(users(:one))
+    assert_redirected_to admin_url
+  end
 
 end

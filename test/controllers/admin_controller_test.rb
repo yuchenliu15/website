@@ -12,4 +12,10 @@ class AdminControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should deny access" do
+    logout
+    get admin_url
+    assert_redirected_to login_url
+  end
+
 end
