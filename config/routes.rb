@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'landing#index'
+
   controller :admin do
     get 'admin' => :index
     post 'admin' => :create
