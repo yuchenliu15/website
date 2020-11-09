@@ -1,3 +1,143 @@
-// Place all the styles related to the Landing controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+    src: font-url("Roboto-Light.ttf");
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;  
+}
+
+@font-face {
+    src: font-url("Poppins-ExtraBold.ttf");
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;  
+}
+
+:root {
+    --theme-color: #F8EFBA;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 15% 60% 10% 15%;
+    grid-template-areas:
+        ". intro . ."
+        ". intro . ."
+        ". intro . .";
+
+    .intro{
+        grid-area: intro;
+    
+        .title {
+            font-family: "Poppins";
+            font-size: 3em;
+            color: #130f40;
+        }
+    
+        #firstline {
+            margin-bottom: -50px;
+        }
+        
+    }
+}
+
+
+
+
+.description{
+    display: block;
+    font-family: "Roboto";
+    font-size: 1.5em;
+    line-height: 2.1em;
+}
+
+.links{
+    word-spacing: 20px;
+    margin-bottom: 100px;
+}
+
+.links a{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+.links a::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, .8, .13, 1);
+    background-color: #f7d794;
+}
+
+
+.links a:hover::after {
+    top: 0;
+}
+
+.links a:visited{
+    color: #000000;
+}
+
+.project {
+    grid-area: project;
+    background-color: var(--theme-color);
+
+}
+
+
+@media screen and (max-width:450px){
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 15% 50% 35%;
+        grid-template-rows: 10% repeat(4, auto) auto;
+        grid-template-areas: 
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro";
+    }
+
+    .navigation li a {
+        padding: 1em;
+    }
+
+    .intro{
+        padding: 1.5em;
+    }
+    
+    .description{
+        font-size: 1.3em;
+        line-height: 1.6em;
+    }
+
+    .links a{
+        font-size: .9em;
+    }
+}
