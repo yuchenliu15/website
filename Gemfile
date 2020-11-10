@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Need ImageMagick installed locally!
 gem 'image_processing', '~> 1.2'
+
+gem "appengine", "~> 0.5.0"
+
+gem "pg", "~> 0.21.0"
+

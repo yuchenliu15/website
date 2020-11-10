@@ -1,0 +1,10 @@
+entrypoint: bundle exec rackup --port $PORT
+env: flex
+runtime: ruby
+
+
+env_variables:
+  SECRET_KEY_BASE: <%= Rails.application.credentials.secret_key_base! %>
+
+beta_settings:
+  cloud_sql_instances: uplifted-env-269417:us-central1:website
