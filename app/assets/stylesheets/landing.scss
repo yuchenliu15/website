@@ -2,18 +2,18 @@
     src: font-url("Roboto-Light.ttf");
     font-family: 'Roboto';
     font-weight: normal;
-    font-style: normal;  
 }
 
 @font-face {
     src: font-url("Poppins-ExtraBold.ttf");
     font-family: 'Poppins';
-    font-weight: normal;
-    font-style: normal;  
+    font-weight: 900;
 }
 
-:root {
-    --theme-color: #F8EFBA;
+@font-face {
+    src: font-url("Poppins-Medium.ttf");
+    font-family: 'Poppins';
+    font-weight: 500;
 }
 
 html {
@@ -67,10 +67,12 @@ body{
             padding: 7px;
             background-color: #c8d6e5;
             border-radius: 10px;
-            font-size: 1.2em;
+            font-size: 1em;
             text-decoration: none;
             color: #000000;
             position: relative;
+            font-family: 'Poppins';
+            font-weight: 900;
         }
         
         
