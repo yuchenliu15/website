@@ -47,4 +47,18 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to posts_url
   end
+
+  test "should be visible on index and show" do
+    logout
+
+    get post_url(@post)
+    assert_response :success
+
+    get post_url
+    assert_response :success
+
+    delete post_url(@post)
+    assert_redirected_to login_url
+
+  end
 end
