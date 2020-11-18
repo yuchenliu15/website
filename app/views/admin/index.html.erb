@@ -1,5 +1,7 @@
 <h1>Welcome</h1>
 
+<%= button_to "logout", logout_url, method: :delete %>
+
 <%= form_tag({:action => "create"}, :multipart => true) do %>
     <div class="field">
         <%= label_tag :file, 'resume' %>

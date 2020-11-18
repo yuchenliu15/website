@@ -3,7 +3,3 @@
 one:
   name: one
   password_digest: <%= BCrypt::Password.create('secret') %>
-
-two:
-  name: two
-  password_digest: <%= BCrypt::Password.create('secret') %>
