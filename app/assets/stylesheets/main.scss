@@ -40,6 +40,7 @@ body{
     grid-gap: 0;
     grid-template-columns: 15% 60% 10% 15%;
     grid-template-areas:
+        ". . . navigator"
         ". intro . ."
         ". intro . ."
         ". intro . .";
@@ -75,4 +76,47 @@ body{
             }
         }
     }
+}
+
+.navigator {
+    grid-area: navigator;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 1em;
+    text-decoration: none;
+    background-color:  #c8d6e5;
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 10px;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+a{
+    
+    padding: 7px;
+    background-color: #c8d6e5;
+    border-radius: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #201717;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+
+a:hover {
+    background-color: #95afc0;
+}
+
+a:visited{
+    color: #000000;
 }
