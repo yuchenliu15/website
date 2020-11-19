@@ -1,4 +1,4 @@
-<div class="post">
+<div class="item">
     <p class="date">⏰ <%= post.created_at.strftime("%m/%d, %Y") %> ⏰</p>
     <p class="title"><%= link_to post.title, post %></p>
     <p><%= truncate(post.body.to_plain_text, length: 190) %></p>
