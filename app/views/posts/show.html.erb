@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="post">
+  <%= button_to '⬅️ back', posts_path, method: :get, class: "button" %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <p class="title">
+    <%= @post.title %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <p class="body">
+    <%= @post.body %>
+  </p>
 
-<p>
-  <strong>Created at:</strong>
-  <%= @post.created_at %>
-</p>
+  <% if session[:user_id] %>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  <% end %>
+  <%= button_to '⬅️ back', posts_url, method: :get, class: "button" %>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>

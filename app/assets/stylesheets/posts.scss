@@ -1,3 +1,58 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.blog {
+    grid-area: intro;
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+
+    * {
+        margin-bottom: -5px;
+    }
+
+    .title {
+        font-family: 'Poppins';
+        font-size: 3em;
+        font-weight: 900;
+        margin-top: 0;
+        a{
+            text-decoration: none;
+        }
+        a:visited{
+            color: #000000;
+        }
+    }
+    
+    .date {
+        font-family: 'Poppins';
+        font-weight: 900;
+        color:#576574;
+    }
+
+    .item {
+        background-color: #c8d6e5;
+        border-radius: 10px;
+        padding: 2.5em;
+        padding-top: 0;
+    }
+}
+
+.post {
+    grid-area: intro;
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    * {
+        margin-bottom: -5px;
+    }
+
+    .title {
+        font-family: 'Poppins';
+        font-size: 3em;
+        font-weight: 900;
+        margin-top: 0;
+        text-align: center;
+    }
+}

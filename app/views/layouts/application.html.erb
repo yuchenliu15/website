@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+    <div class="navigator">
+      <%= link_to "home", root_url %>
+    </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

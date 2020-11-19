@@ -1,1 +1,122 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+@font-face {
+    src: font-url("Roboto-Light.ttf");
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+@font-face {
+    src: font-url("Poppins-ExtraBold.ttf");
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+@font-face {
+    src: font-url("Poppins-Medium.ttf");
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 15% 60% 10% 15%;
+    grid-template-areas:
+        ". . . navigator"
+        ". intro . ."
+        ". intro . ."
+        ". intro . .";
+
+    @media only screen and (max-device-width: 480px){
+        grid-template-columns: 15% 50% 35%;
+        grid-template-rows: 10% repeat(4, auto) auto;
+        grid-template-areas: 
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro";
+        
+        .intro{
+            padding: 80px;
+    
+            .title {
+                font-size: 5em;
+    
+            }
+            .description{
+                font-size: 3em;
+            }
+            
+            .links{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+    
+            a{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.navigator {
+    grid-area: navigator;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 1em;
+    text-decoration: none;
+    background-color:  #c8d6e5;
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 10px;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+a{
+    
+    padding: 7px;
+    background-color: #c8d6e5;
+    border-radius: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #201717;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 900;
+}
+
+
+a:hover {
+    background-color: #95afc0;
+}
+
+a:visited{
+    color: #000000;
+}
