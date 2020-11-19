@@ -12,7 +12,11 @@
   <body>
     <div class="container">
     <div class="navigator">
-      <%= link_to "home", root_url %>
+      <%= link_to "🏠home", root_url, 
+        class: ('current' if current_page?('/')) %>
+
+      <%= link_to "💡blog", posts_url, 
+        class: ('current' if current_page?('/posts')) %>
     </div>
       <%= yield %>
     </div>

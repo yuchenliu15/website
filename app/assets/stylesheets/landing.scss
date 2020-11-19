@@ -4,19 +4,22 @@
 
     .title {
         font-family: "Poppins";
-        font-size: 3em;
-        color: #130f40;
+        font-size: 5em;
+        line-height: 1.5em;
+        color: #30336b;
     }
     
     #firstline {
-        margin-bottom: -50px;
+        margin-top: -10px;
+        margin-bottom: -30px;
     }
 
     .description{
         display: block;
-        font-family: "Roboto";
-        font-size: 1.5em;
-        line-height: 2.1em;
+        font-family: "Poppins";
+        font-size: 3.5em;
+        font-weight: 700;
+        line-height: 1.2em;
     }
     
     .links{

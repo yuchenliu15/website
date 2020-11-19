@@ -38,12 +38,12 @@ body{
 .container {
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 15% 60% 10% 15%;
+    grid-template-columns: 5% 90% 5%;
     grid-template-areas:
-        ". . . navigator"
-        ". intro . ."
-        ". intro . ."
-        ". intro . .";
+        ". navigator navigator"
+        ". intro ."
+        ". intro ."
+        ". intro .";
 
     @media only screen and (max-device-width: 480px){
         grid-template-columns: 15% 50% 35%;
@@ -81,8 +81,17 @@ body{
 .navigator {
     grid-area: navigator;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1em;
+    margin: 1em;
+    
+    .current{
+        background-color: #95afc0;
+    }
 }
+
+
 
 .button {
     font-family: 'Poppins';
@@ -104,7 +113,7 @@ a{
     padding: 7px;
     background-color: #c8d6e5;
     border-radius: 10px;
-    font-size: 1.5em;
+    font-size: 2.5em;
     text-decoration: none;
     color: #201717;
     position: relative;
