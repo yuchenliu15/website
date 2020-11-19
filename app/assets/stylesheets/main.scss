@@ -34,3 +34,46 @@ body{
     font-family: 'Poppins';
     font-weight: 500;
 }
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 15% 60% 10% 15%;
+    grid-template-areas:
+        ". intro . ."
+        ". intro . ."
+        ". intro . .";
+
+    @media only screen and (max-device-width: 480px){
+        grid-template-columns: 15% 50% 35%;
+        grid-template-rows: 10% repeat(4, auto) auto;
+        grid-template-areas: 
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro"
+            "intro intro intro";
+        
+        .intro{
+            padding: 80px;
+    
+            .title {
+                font-size: 5em;
+    
+            }
+            .description{
+                font-size: 3em;
+            }
+            
+            .links{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+    
+            a{
+                text-align: center;
+            }
+        }
+    }
+}

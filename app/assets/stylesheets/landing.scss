@@ -1,89 +1,47 @@
-.container {
-    height: 100%;
-    display: grid;
-    grid-gap: 0;
-    grid-template-columns: 15% 60% 10% 15%;
-    grid-template-areas:
-        ". intro . ."
-        ". intro . ."
-        ". intro . .";
+.intro {
+    grid-area: intro;
 
-    .intro {
-        grid-area: intro;
-    
-        .title {
-            font-family: "Poppins";
-            font-size: 3em;
-            color: #130f40;
-        }
-    
-        #firstline {
-            margin-bottom: -50px;
-        }
-
-        .description{
-            display: block;
-            font-family: "Roboto";
-            font-size: 1.5em;
-            line-height: 2.1em;
-        }
-        
-        .links{
-            word-spacing: 20px;
-            margin-bottom: 100px;
-        }
-        
-        a{
-            padding: 7px;
-            background-color: #c8d6e5;
-            border-radius: 10px;
-            font-size: 1em;
-            text-decoration: none;
-            color: #201717;
-            position: relative;
-            font-family: 'Poppins';
-            font-weight: 900;
-        }
-        
-        
-        a:hover {
-            background-color: #95afc0;
-        }
-        
-        a:visited{
-            color: #000000;
-        }
+    .title {
+        font-family: "Poppins";
+        font-size: 3em;
+        color: #130f40;
     }
 
-    @media only screen and (max-device-width: 480px){
-        grid-template-columns: 15% 50% 35%;
-        grid-template-rows: 10% repeat(4, auto) auto;
-        grid-template-areas: 
-            "intro intro intro"
-            "intro intro intro"
-            "intro intro intro"
-            "intro intro intro";
-        
-        .intro{
-            padding: 80px;
+    #firstline {
+        margin-bottom: -50px;
+    }
 
-            .title {
-                font-size: 5em;
-
-            }
-            .description{
-                font-size: 3em;
-            }
-            
-            .links{
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-            }
-
-            a{
-                text-align: center;
-            }
-        }
+    .description{
+        display: block;
+        font-family: "Roboto";
+        font-size: 1.5em;
+        line-height: 2.1em;
+    }
+    
+    .links{
+        word-spacing: 20px;
+        margin-bottom: 100px;
+    }
+    
+    a{
+        padding: 7px;
+        background-color: #c8d6e5;
+        border-radius: 10px;
+        font-size: 1em;
+        text-decoration: none;
+        color: #201717;
+        position: relative;
+        font-family: 'Poppins';
+        font-weight: 900;
+    }
+    
+    
+    a:hover {
+        background-color: #95afc0;
+    }
+    
+    a:visited{
+        color: #000000;
     }
 }
+
