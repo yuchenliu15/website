@@ -46,34 +46,15 @@ body{
         ". intro .";
 
     @media only screen and (max-device-width: 480px){
-        grid-template-columns: 15% 50% 35%;
-        grid-template-rows: 10% repeat(4, auto) auto;
+        grid-template-columns: 20% 60% 20%;
         grid-template-areas: 
-            "intro intro intro"
+            "navigator navigator navigator"
             "intro intro intro"
             "intro intro intro"
             "intro intro intro";
-        
-        .intro{
-            padding: 80px;
-    
-            .title {
-                font-size: 5em;
-    
-            }
-            .description{
-                font-size: 3em;
-            }
-            
-            .links{
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-            }
-    
-            a{
-                text-align: center;
-            }
+
+        a {
+            font-size: 4em;
         }
     }
 }
@@ -83,15 +64,43 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 1em;
     margin: 1em;
+    max-height: 120px;
     
     .current{
         background-color: #95afc0;
     }
+
+    a {
+        margin-left: .5em;
+    }
+}
+
+a{
+    padding: 7px;
+    background-color: #c8d6e5;
+    border-radius: 10px;
+    font-size: 2.5em;
+    text-decoration: none;
+    color: #201717;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 900;
+
+    @media only screen and (max-device-width: 480px) {
+        font-size: 4em;
+        max-height: 2em;
+    }
 }
 
 
+a:hover {
+    background-color: #95afc0;
+}
+
+a:visited{
+    color: #000000;
+}
 
 .button {
     font-family: 'Poppins';
@@ -108,24 +117,3 @@ body{
     cursor: pointer;
 }
 
-a{
-    
-    padding: 7px;
-    background-color: #c8d6e5;
-    border-radius: 10px;
-    font-size: 2.5em;
-    text-decoration: none;
-    color: #201717;
-    position: relative;
-    font-family: 'Poppins';
-    font-weight: 900;
-}
-
-
-a:hover {
-    background-color: #95afc0;
-}
-
-a:visited{
-    color: #000000;
-}

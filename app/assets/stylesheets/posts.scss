@@ -1,38 +1,49 @@
 .blog {
     grid-area: intro;
     font-family: 'Roboto';
-    font-size: 1.5em;
     display: flex;
     flex-direction: column;
-
     * {
         margin-bottom: -5px;
     }
 
-    .title {
-        font-family: 'Poppins';
-        font-size: 3em;
-        font-weight: 900;
-        margin-top: 0;
-        a{
-            text-decoration: none;
-        }
-        a:visited{
-            color: #000000;
-        }
-    }
-    
-    .date {
-        font-family: 'Poppins';
-        font-weight: 900;
-        color:#576574;
-    }
-
     .item {
+        font-size: 1.5em;
         background-color: #c8d6e5;
         border-radius: 10px;
         padding: 2.5em;
         padding-top: 0;
+
+        .title {
+            font-family: 'Poppins';
+            font-size: 3em;
+            font-weight: 900;
+            margin-top: 0;
+            a{
+                text-decoration: none;
+            }
+            a:visited{
+                color: #000000;
+            }
+        }
+        
+        .date {
+            font-family: 'Poppins';
+            font-weight: 900;
+            color:#576574;
+        }
+    }
+
+    @media only screen and (max-device-width: 480px){
+        padding: 40px;
+
+        .item {
+            font-size: 4em;
+            padding: 0 1em 1em 1em;
+            .title {
+                font-size: .5em;
+            }
+        }
     }
 }
 
@@ -54,5 +65,18 @@
         font-weight: 900;
         margin-top: 0;
         text-align: center;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+        padding: 40px;
+        font-size: 3em;
+        margin: 0;
+        .back {
+            visibility: hidden;
+            position: absolute;
+        }
+        .title {
+            font-size: 2em;
+        }
     }
 }

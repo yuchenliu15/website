@@ -1,5 +1,5 @@
 <div class="post">
-  <%= button_to '⬅️ back', posts_path, method: :get, class: "button" %>
+  <%= button_to '⬅️ back', posts_path, method: :get, class: "button back" %>
 
   <p class="title">
     <%= @post.title %>
@@ -12,6 +12,6 @@
   <% if session[:user_id] %>
     <%= link_to 'Edit', edit_post_path(@post) %>
   <% end %>
-  <%= button_to '⬅️ back', posts_url, method: :get, class: "button" %>
+  <%= button_to '⬅️ back', posts_url, method: :get, class: "button back" %>
 </div>
 
